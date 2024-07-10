@@ -3,7 +3,7 @@ import re
 class CleanFileNameNode:
     """
     A node that cleans file names by replacing spaces with a specified character,
-    removing invalid characters, adding a prefix, and truncating the result to a specified length.
+    removing invalid characters and line breaks, adding a prefix, and truncating the result to a specified length.
 
     Class methods
     -------------
@@ -61,9 +61,12 @@ class CleanFileNameNode:
         
         # Compile the invalid characters into a regular expression
         invalid_chars_re = re.compile(f"[{re.escape(invalid_chars)}]")
-
+        
         # Replace spaces with the replacement character
         cleaned_text = input_text.replace(" ", replacement_char)
+        
+        # Remove line breaks
+        cleaned_text = cleaned_text.replace("\n", "").replace("\r", "")
         
         # Remove invalid characters
         cleaned_text = invalid_chars_re.sub(replacement_char, cleaned_text)
@@ -71,11 +74,8 @@ class CleanFileNameNode:
         # Remove any consecutive replacement characters
         cleaned_text = re.sub(f'{replacement_char}+', replacement_char, cleaned_text)
 
-        # Truncate the text to the specified character limit
-        truncated_text = cleaned_text[:char_limit]
-
         # Add the prefix
-        final_text = prefix + truncated_text
+        final_text = prefix + cleaned_text
         
         # Ensure the final text length does not exceed the character limit
         final_text = final_text[:char_limit]
