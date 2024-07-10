@@ -15,6 +15,6 @@ setup(
     },
     author="Pablo Apiolazza",
     author_email="info@apzmedia.com",
-    description="A ComfyUI node to clean and sanitize file names.",
+    description="A ComfyUI node to clean and sanitize text to be used as file names.",
     url="https://github.com/apzmedia/ComfyUI-APZmedia-cleanName-from-string",
 )
