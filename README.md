@@ -14,6 +14,7 @@ The Clean File Name Node is a custom node for ComfyUI designed to process and sa
 - `replacement_char` (STRING): Character to replace invalid characters (default: `-`).
 - `invalid_chars` (STRING): A string containing characters to be removed (default: ` #%&{}\\<>*?/ $!'\":@+`|=.`, emojis, and alt codes).
 - `char_limit` (INT): Maximum length of the output string (default: 255).
+- `Prefix` (INT): A prefix to create filenames.
 
 ## Output Types
 - `cleaned_text` (STRING): The sanitized and truncated text string.
