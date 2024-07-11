@@ -1,4 +1,4 @@
-# Clean File Name Node
+# APZmedia Clean File Name Node
 
 ## Overview
 The Clean File Name Node is a custom node for ComfyUI designed to process and sanitize text strings for use as valid file names. It replaces invalid characters with a user-specified character and truncates the resulting string to a defined length.
