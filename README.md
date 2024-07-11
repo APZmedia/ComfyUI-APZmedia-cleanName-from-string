@@ -23,16 +23,18 @@ The Clean File Name Node is a custom node for ComfyUI designed to process and sa
 1. **Replace Spaces**: All spaces in the input text are replaced with the specified replacement character.
 2. **Remove Invalid Characters**: The node removes all characters defined in the `invalid_chars` string.
 3. **Truncate Text**: The resulting text is truncated to the length defined by `char_limit`.
+4. **Prepend prefix**: If you added a prefix, it will prepend it to the resulting sanitized output
 
 ## Usage Example
 ```
 input_text: "This is a text! With Very Invalid £ Character$."
 replacement_char: "-"
-char_limit: 255
+char_limit: 30
+Prefix: CustomImage_
 ```
 ### Output
 ```
-cleaned_text: "This-is-a-text-With-Very-Invalid-Character"
+cleaned_text: "CustomImage_This-is-a-text-With-Very-Inval"
 ```
 
 This node is useful for preparing strings to be used as file names, ensuring they are valid and meet specific length requirements.
