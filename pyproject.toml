@@ -1,0 +1,14 @@
+[project]
+name = "comfyui-apzmedia-cleanname-from-string"
+description = "The Clean File Name Node is a custom node for ComfyUI designed to process and sanitize text strings for use as valid file names. It replaces invalid characters with a user-specified character and truncates the resulting string to a defined length."
+version = "1.0.0"
+license = "LICENSE"
+
+[project.urls]
+Repository = "https://github.com/APZmedia/ComfyUI-APZmedia-cleanName-from-string"
+#  Used by Comfy Registry https://comfyregistry.org
+
+[tool.comfy]
+PublisherId = ""
+DisplayName = "ComfyUI-APZmedia-cleanName-from-string"
+Icon = ""
