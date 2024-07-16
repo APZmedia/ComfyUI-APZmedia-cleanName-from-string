@@ -1,9 +1,11 @@
 import re
+import unidecode
 
 class CleanFileNameNode:
     """
     A node that cleans file names by replacing spaces with a specified character,
     removing invalid characters and line breaks, adding a prefix, and truncating the result to a specified length.
+    Additionally, it substitutes accented characters with their corresponding unaccented characters.
 
     Class methods
     -------------
@@ -62,8 +64,11 @@ class CleanFileNameNode:
         # Compile the invalid characters into a regular expression
         invalid_chars_re = re.compile(f"[{re.escape(invalid_chars)}]")
         
+        # Substitute accented characters with their unaccented equivalents
+        cleaned_text = unidecode.unidecode(input_text)
+        
         # Replace spaces with the replacement character
-        cleaned_text = input_text.replace(" ", replacement_char)
+        cleaned_text = cleaned_text.replace(" ", replacement_char)
         
         # Remove line breaks
         cleaned_text = cleaned_text.replace("\n", "").replace("\r", "")
