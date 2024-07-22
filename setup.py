@@ -10,7 +10,7 @@ setup(
     ],
     entry_points={
         'comfyui.nodes': [
-            'clean_file_name_node = nodes.APZnamefromtrext:CleanFileNameNode',
+            'clean_file_name_node = nodes.APZnamefromtext:CleanFileNameNode',
         ],
     },
     author="Pablo Apiolazza",
