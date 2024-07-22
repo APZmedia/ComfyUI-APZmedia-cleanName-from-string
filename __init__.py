@@ -1,4 +1,4 @@
-from .nodes import CleanFileNameNode
+from .nodes.APZnamefromtrext import CleanFileNameNode
 
 NODE_CLASS_MAPPINGS = {
     "CleanFileNameNode": CleanFileNameNode
