@@ -6,15 +6,16 @@ setup(
     packages=find_packages(),
     include_package_data=True,
     install_requires=[
-        # Add any dependencies your node requires here
+        'unidecode',
     ],
     entry_points={
         'comfyui.nodes': [
-            'clean_file_name_node = clean_file_name_node:CleanFileNameNode',
+            'clean_file_name_node = nodes.APZnamefromtrext:CleanFileNameNode',
         ],
     },
     author="Pablo Apiolazza",
     author_email="info@apzmedia.com",
     description="A ComfyUI node to clean and sanitize text to be used as file names.",
     url="https://github.com/apzmedia/ComfyUI-APZmedia-cleanName-from-string",
+    python_requires='>=3.6',
 )
