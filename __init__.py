@@ -1,4 +1,4 @@
-from .nodes.APZnamefromtext import CleanFileNameNode
+from .nodes import CleanFileNameNode
 
 NODE_CLASS_MAPPINGS = {
     "CleanFileNameNode": CleanFileNameNode
