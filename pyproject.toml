@@ -1,0 +1,15 @@
+[project]
+name = "APZmedia Clean name from string"
+description = "A Python package to clean names from strings."
+version = "1.6.5"
+license = "MIT"
+dependencies = ["unidecode"]
+
+[project.urls]
+Repository = "https://github.com/APZmedia/ComfyUI-APZmedia-cleanName-from-string"
+#  Used by Comfy Registry https://comfyregistry.org
+
+[tool.comfy]
+PublisherId = "APZmedia"
+DisplayName = "APZmedia Clean Name"
+Icon = 
