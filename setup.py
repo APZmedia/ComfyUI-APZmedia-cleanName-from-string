@@ -11,7 +11,8 @@ setup(
     entry_points={
         'comfyui.nodes': [
             'clean_file_name_node = nodes.APZnamefromtext:CleanFileNameNode',
-            'generate_file_path_node = nodes.APZGenerateFilePathNode:GenerateFilePathNode',  # Added new node
+            'generate_file_path_node = nodes.APZGenerateFilePathNode:GenerateFilePathNode',
+             'standard_name_node = nodes.APZfileNameBuilder:APZmediaStandardFilenameBuilder'
         ],
     },
     author="Pablo Apiolazza",
