@@ -1,6 +1,6 @@
 [project]
-name = "APZmedia Clean File Name Node"
-description = "A custom node to sanitize text to make clean file names from strings."
+name = "APZmedia Clean File Name Nodes"
+description = "A set of custom nodes to build and sanitize text to make clean file names from strings."
 version = "1.6.5"
 license = "MIT"
 dependencies = ["unidecode"]
