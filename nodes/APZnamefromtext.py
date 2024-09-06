@@ -91,13 +91,6 @@ class CleanFileNameNode:
     def IS_CHANGED(s, input_text, replacement_char, invalid_chars, prefix, char_limit):
         return f"{input_text}_{replacement_char}_{invalid_chars}_{prefix}_{char_limit}"
 
-from aiohttp import web
-from server import PromptServer
-
-@PromptServer.instance.routes.get("/clean_filename")
-async def get_clean_filename(request):
-    return web.json_response("Clean File Name Node")
-
 NODE_CLASS_MAPPINGS = {
     "CleanFileNameNode": CleanFileNameNode
 }
